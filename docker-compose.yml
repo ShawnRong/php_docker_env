@@ -37,3 +37,24 @@ services:
             - applications
         expose:
             - "9000"
+
+### MYSQL Container #################
+    
+    mysql:
+        build:
+            context: ./mysql
+            args:
+                - MYSQL_DATABASE=project
+                - MYSQL_USER=admin
+                - MYSQL_PASSWORD=admin123
+                - MYSQL_ROOT_PASSWORD=root
+        volumes:
+            - mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+            
+### Volumes Setup ###########################################
+
+volumes:
+    mysql:
+        driver: "local"

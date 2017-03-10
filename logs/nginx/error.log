@@ -1,0 +1,10 @@
+2017/03/10 06:39:11 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 06:48:00 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 06:51:17 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 06:55:08 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 06:56:25 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 06:56:36 [emerg] 1#1: no port in upstream "php-upstream" in /etc/nginx/sites-available/default.conf:16
+2017/03/10 07:07:04 [emerg] 1#1: no host in upstream ":9000" in /etc/nginx/conf.d/upstream.conf:1
+2017/03/10 07:10:39 [error] 7#7: *5 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /var/www/index.php on line 3" while reading response header from upstream, client: 172.18.0.1, server: laradock, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"
+2017/03/10 07:11:06 [error] 8#8: *7 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /var/www/index.php on line 3" while reading response header from upstream, client: 172.18.0.1, server: laradock, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"
+2017/03/10 07:11:18 [error] 8#8: *7 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /var/www/index.php on line 3" while reading response header from upstream, client: 172.18.0.1, server: laradock, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "localhost:8080"

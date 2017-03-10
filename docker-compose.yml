@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+
+### Application Code Container ######
+
+    applications:
+        image: tianon/true
+        volumes:
+            - ./www/html:/var/www
+
+### Nginx Server Container ##########
+
+    nginx:
+        build:
+            context: ./nginx
+            args:
+                - PHP_UPSTREAM=php-fpm
+        volumes_from:
+            - applications
+        volumes:
+            - ./logs/nginx/:/var/log/nginx
+            - ./nginx/sites/:/etc/nginx/sites-available
+        ports:
+            - "8080:80"
+            - "4433:443"
+        links:
+            - php-fpm
+
+### PHP-FPM Container ###############
+
+    php-fpm:
+        build:
+            context: ./php-fpm
+            dockerfile: Dockerfile-70
+        volumes_from:
+            - applications
+        expose:
+            - "9000"
